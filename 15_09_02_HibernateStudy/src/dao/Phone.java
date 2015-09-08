@@ -29,10 +29,5 @@ public class Phone {
 		this.phone = phone;
 	}
 	
-	//comment to comment purposes
-	
-	//second comment to comment purposes
-
-
 
 }
