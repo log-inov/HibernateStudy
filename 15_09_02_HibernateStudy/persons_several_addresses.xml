@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+<bean id="PersonsList" class="controller.PersonsData">
+	<property name="persons">
+		<list>
+			<bean class="dao.Person">
+				<property name="firstName" value="Israel"/>
+				<property name="lastName" value="Tel-Aviv"/>
+				<property name="addresses">
+				<list>
+					<bean class="dao.Address">
+						<property name="country" value="Russia"/>
+						<property name="city" value="Saint-Petersburg"/>
+						<property name="street" value="Moscovsky propspect"/>
+						<property name="house" value="123"/>
+						<property name="app" value="456"/>
+					</bean>
+					<bean class="dao.Address">
+						<property name="country" value="Russia"/>
+						<property name="city" value="Moscow"/>
+						<property name="street" value="Red Square"/>
+						<property name="house" value="789"/>
+						<property name="app" value="1011"/>
+					</bean>				
+				</list>
+				</property>
+				<property name="phones">
+				<list>
+					<bean class="dao.Phone">
+						<property name="phone" value="123456789"/>
+					</bean>
+					<bean class="dao.Phone">
+						<property name="phone" value="987654321"/>
+					</bean>
+				</list>
+				</property>
+			</bean>
+			<bean class="dao.Person">
+				<property name="firstName" value="Israel"/>
+				<property name="lastName" value="Tel-Aviv"/>
+				<property name="addresses">
+				<list>
+					<bean class="dao.Address">
+						<property name="country" value="Russia"/>
+						<property name="city" value="Saint-Petersburg"/>
+						<property name="street" value="Moscovsky propspect"/>
+						<property name="house" value="123"/>
+						<property name="app" value="456"/>
+					</bean>
+					<bean class="dao.Address">
+						<property name="country" value="Russia"/>
+						<property name="city" value="Moscow"/>
+						<property name="street" value="Red Square"/>
+						<property name="house" value="789"/>
+						<property name="app" value="1011"/>
+					</bean>				
+				</list>
+				</property>
+				<property name="phones">
+				<list>
+					<bean class="dao.Phone">
+						<property name="phone" value="123456789"/>
+					</bean>
+					<bean class="dao.Phone">
+						<property name="phone" value="987654321"/>
+					</bean>
+				</list>
+				</property>
+			</bean>
+		</list>
+	</property>
+	
+</bean>
+</beans>
